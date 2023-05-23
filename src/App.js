@@ -28,6 +28,7 @@ const App = () => {
     axios
       .get(URL)
       .then((response) => {
+        console.log("GOOGLE", response.data)
         setDataGoogle(response.data);
       })
       .catch((error) => {
@@ -40,6 +41,7 @@ const App = () => {
     axios
       .get(URL)
       .then((response) => {
+        console.log("VIDEOS", response.data)
         setDataYoutube(response.data);
       })
       .catch((error) => {
@@ -120,7 +122,7 @@ const App = () => {
           <h2 className="SearchInfoContainerTitle">Search information</h2>
           <p>
             <b>Total results: </b>
-            {dataYoutube &&
+            {dataYoutube && dataGoogle &&
               (
                 dataGoogle.search_information.total_results +
                 dataYoutube.search_information.total_results
@@ -128,7 +130,7 @@ const App = () => {
           </p>
           <p>
             <b>Time: </b>
-            {dataYoutube &&
+            {dataYoutube && dataGoogle &&
               (
                 dataGoogle.search_information.time_taken_displayed +
                 dataYoutube.search_information.time_taken_displayed

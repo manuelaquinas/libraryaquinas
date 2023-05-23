@@ -1,6 +1,6 @@
 {
-  "name": "api-library",
-  "homepage": "https://manuelaquinas.github.io/library",
+  "name": "serp-api-library",
+  "homepage": "https://manuelaquinas.github.io/libraryaquinas",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,24 +8,16 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-    "google-search-results-nodejs": "^2.1.0",
-    "https-browserify": "^1.0.0",
-    "querystring-es3": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "serpapi": "^1.1.1",
-    "stream-browserify": "^3.0.0",
-    "web-vitals": "^2.1.4",
-    "gh-pages": "^5.0.0"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -44,8 +36,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^5.0.0"
   }
 }
