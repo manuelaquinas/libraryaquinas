@@ -1,6 +1,5 @@
 {
   "name": "serp-api-library",
-  "homepage": "https://manuelaquinas.github.io/libraryaquinas",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
