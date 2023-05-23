@@ -1,7 +1,7 @@
 import React from "react";
 import CardVideo from "./CardVideo";
 
-const CardListVide = ({ data }) => {
+const CardListVideo = ({ data }) => {
   if (data === null) {
     return null;
   } else {
@@ -22,7 +22,6 @@ const CardListVide = ({ data }) => {
               // length={data.length}
               // description={data.description}
               // views={data.views}
-            
             />
           );
         })}
@@ -31,4 +30,4 @@ const CardListVide = ({ data }) => {
   }
 };
 
-export default CardListVide;
+export default CardListVideo;

@@ -3,10 +3,11 @@ import axios from "axios";
 import CardList from "./Components/CardList";
 import CardListVideo from "./Components/CardListVideo";
 import React, { useState } from "react";
+import SearchInformation from "./Components/SearchInformation";
 
 const App = () => {
-  const URLApi = process.env.REACT_APP_API;
-  const apiKey = process.env.REACT_APP_API_TOKEN;
+  const URLApi = "https://serpapi.com/search.json?";
+  const apiKey = "a62389b08a52b6cff9c889a2a8e852037a08a010e3f984e773946097d02b67d3";
     
   let [dataGoogle, setDataGoogle] = useState(null);
   let [dataYoutube, setDataYoutube] = useState(null);
@@ -118,29 +119,7 @@ const App = () => {
       </div>
 
       <div className="containerDashboard">
-        <div className="SearchInfoContainer">
-          <h2 className="SearchInfoContainerTitle">Search information</h2>
-          <p>
-            <b>Total results: </b>
-            {dataYoutube && dataGoogle &&
-              (
-                dataGoogle.search_information.total_results +
-                dataYoutube.search_information.total_results
-              ).toLocaleString()}
-          </p>
-          <p>
-            <b>Time: </b>
-            {dataYoutube && dataGoogle &&
-              (
-                dataGoogle.search_information.time_taken_displayed +
-                dataYoutube.search_information.time_taken_displayed
-              ).toFixed(3) + "s"}
-          </p>
-          <p>
-            <b>Query displayed: </b>
-            {dataYoutube && dataYoutube.search_information.query_displayed}
-          </p>
-        </div>
+        <SearchInformation dataGoogle={dataGoogle} dataYoutube={dataYoutube}/>
 
         <div>
           <div className="SearchContainer">
